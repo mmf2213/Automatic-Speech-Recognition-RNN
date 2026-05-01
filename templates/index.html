@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASR System</title>
+</head>
+<body>
+
+<h2>Speech to Text (RNN)</h2>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Convert</button>
+</form>
+
+{% if prediction is defined %}
+    <h3>Prediction: {{ prediction }}</h3>
+{% endif %}
+
+</body>
+</html>
